@@ -1,0 +1,1 @@
+web: gunicorn sold_house_prices.wsgi --log-file -
