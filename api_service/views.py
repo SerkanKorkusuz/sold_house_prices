@@ -67,7 +67,6 @@ class SoldHouseTxNumberViews(APIView):
 
         serializer = SoldHouseSerializer(queryset, many=True)
         extracted_data = serializer.data
-        print(extracted_data)
 
         histogram_dict = self.create_histogram_data(extracted_data)
 
