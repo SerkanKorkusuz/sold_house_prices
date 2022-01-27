@@ -36,6 +36,7 @@ class Command(BaseCommand):
                     try:
                         self.insert_to_db(row)
                     except IntegrityError:  # Continue to insert next row after encountering a duplicated data
+                        print('Duplicated data to insert. It is skipped.')
                         continue
             finally:
                 csv_file.close()
