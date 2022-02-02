@@ -12,9 +12,12 @@ pip install -r requirements.txt
 - Another way to set environment variables can be done by exporting or setting them on the operating system
 - The solution is already configured to be hosted on heroku and API links can be listed as:
   - ``https://sold-house-prices.herokuapp.com/api/sold-houses/avg-prices?post_code=<post_code>&from_date=<from_date>&to_date=<to_date>``
-  - ``https://sold-house-prices.herokuapp.com/api/sold-houses/tx-numbers?post_code=<post_code>&date=<to_date>``
-- Example requests: 
-   - ``curl -X GET "https://sold-house-prices.herokuapp.com/api/sold-houses/avg-prices?post_code=BS20%206JQ&from_date=1994-01&to_date=2018-11"``
+  - ``https://sold-house-prices.herokuapp.com/api/sold-houses/tx-numbers?post_code=<post_code>&date=<date>``
+- Example requests:
+   - ``curl -X GET "https://sold-house-prices.herokuapp.com/api/sold-houses/avg-prices?from_date=1995-09&to_date=1995-10"``
+   - ``curl -X GET "https://sold-house-prices.herokuapp.com/api/sold-houses/avg-prices?post_code=BS20%206JQ&from_date=1995-09&to_date=1995-10"``
+   - ``curl -X GET "https://sold-house-prices.herokuapp.com/api/sold-houses/tx-numbers?date=1995-06"``
+   - ``curl -X GET "https://sold-house-prices.herokuapp.com/api/sold-houses/tx-numbers?post_code=BS20%206JQ&date=1995-09"``
    - ``curl -X GET "https://sold-house-prices.herokuapp.com/api/sold-houses/tx-numbers?post_code=BS20%206JQ&date=2000-06"``
 - The query parameters ``from_date``, ``to_date`` and ``date`` should be in the format of YYYY-MM as it is how used in the example requests.
 - The query parameter ``post_code`` should be paid attention because it could contain a blank character that corresponds ``%20`` on the uri.
