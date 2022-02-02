@@ -145,3 +145,11 @@ DEFAULT_DATE = '2011-08'
 
 # The number of histogram brackets constant
 HISTOGRAM_BRACKET_NUMBER = 8
+
+# Property types of the homes
+PROPERTY_TYPES = {
+    'Detached': 'D',
+    'Semi detached': 'S',
+    'Terraced': 'T',
+    'Flats': 'F',
+}
